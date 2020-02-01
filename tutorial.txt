@@ -1,0 +1,45 @@
+1)  Create the Database
+
+Syntax :    new TDB("name_of_database");
+
+
+
+2)  Create the tables for the Database
+
+Syntax: TDB.createTables("table1, table2, table3, table4,...");
+
+
+
+3)  Add data to the database
+
+Syntax: TDB.addData(id_of_rows, "data_for_table_1, data_for_table2, data_for_table3,...");
+
+
+
+4)  Get the name of our database
+
+Syntax: TDB.getName();
+
+
+
+5) Get the value from a specific table for a Id or row
+
+Syntax: TDB.getData(id_of_row, table_name);
+
+
+
+6) Get the information about a specific ID or row
+
+Syntax: TDB.getInformation(id_of_row);
+
+
+
+7) Update a data from a specific id's table
+
+Syntax:	TDB.update(id_of_row,"The table's name","The_new_data");
+
+
+
+8) remove an entire line or row of information depending on the ID
+
+Syntax:	TDB.remove(id_of_the_row);
