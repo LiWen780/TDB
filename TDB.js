@@ -81,7 +81,7 @@ class TDB{
 	//DELETE THE INFORMATION OF A ROW OR ID
 	//-------------------------------------------------------------------------------
 	remove(id){
-		
+		database.splice(id,1);
 	}
 }
     
