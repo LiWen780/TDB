@@ -1,7 +1,3 @@
-/*function List(){
-    this.next = null;
-    this.data;
-}*/
 let database = [];
 
 class TDB{
@@ -32,7 +28,7 @@ class TDB{
         
         database[database.length] = [];
         
-        for(var j=0;j<info.length;j++)
+        for(var j=0;j<this.table.length;j++)
         {
             //database[data_id][table]
             if(id != "")
