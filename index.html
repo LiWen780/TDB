@@ -22,9 +22,13 @@
             
             id.innerHTML += "<br/> "+bd.getData(0, "price") +" ";
 			
-			id.innerHTML += "<br/> "+bd.getInformation(1)+" ";
+	    id.innerHTML += "<br/> "+bd.getInformation(1)+" ";
 			
-			id.innerHTML += "<br/> "+bd.getData(1, "Continent") +" ";
+	    id.innerHTML += "<br/> "+bd.getData(1, "Continent") +" ";
+		
+	    bd.remove(0);
+            
+            id.innerHTML += "<br/><br/> "+bd.getInformation(0);+" ";
             
         </script>
     </body>
