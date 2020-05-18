@@ -29,13 +29,12 @@ You're updating the first column of the second row with the data "new_Data".
 You're updating the column "Position" at row where the data in column "Continent" is "Asia"
 
 6) Get data from a cell of the data:
-    Syntax: .getData(row_id, column_id)
-    
-    Syntax 2: country.getData("Countries = China", "Languages")
- Get data in column "Languages" from the row where the data from column "Countries" is "China".
+      Syntax: .getData(row_id, column_id)
+      Syntax 2: country.getData("Countries = China", "Languages")
+  Get data in column "Languages" from the row where the data from column "Countries" is "China".
 
 7) Delete an entire row from the table:
-    Syntax: .removeRow(row_id)
+      Syntax: .removeRow(row_id)
       Syntax 2: country.removeRow("Countries = China")
     
     Remove the row where the data from column "Countries" is "China"
