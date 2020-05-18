@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	
+    </head>
+    <body>
+		<script src="TDB_1.1.js"></script>
+        <h1 id="try"></h1>
+        <script type="text/javascript">
+			var h1 = document.getElementById("try");
+			var store = new TDB.Storage("MongoDB");
+			
+			//---------------------COUNTRY-------------------------------------------
+			var columns = ["Countries","Languages","Continent"];
+            var country = new TDB.Table("COUNTRY", columns);
+			
+			country.addColumn("Ethnicity");
+			country.addColumn("Wealth");
+			
+			country.addRow("USA, English, America, White, Rich");
+			country.addRow("China, Madarin, Asia, Chinese, Mid-Rich");
+			country.addRow("Russia, Russian, Europa, Russian, Rich");
+			country.addRow("Canada, English/French, America, White, Rich");
+			country.addRow("Great Brittain, English, Europa, White, Rich");
+			country.addRow("Haiti, Creole, America, Black, Poor");
+			country.addRow("South Africa, English/Africaans, Africa, Black, Medium");
+			
+			//-------------------------MOVIES-------------------------------------------
+            var movies = new TDB.Table("Movies");
+			
+			movies.addColumn("Name");
+			movies.addColumn("Genre");
+			
+			movies.addRow("Avengers Endgame, Science fiction");
+			movies.addRow("It, Horror");
+			movies.addRow("Beauty and the Beast, Romance/Fantasy");
+			movies.addRow("Ducobu, Comedy");
+			movies.addRow("1917, Action/War");
+			/*
+			//h1.innerHTML = "Columns: "+country.getData(1,3);
+			h1.innerHTML = "Columns: "+country.getData("Countries = China", "Languages");
+			h1.innerHTML += "<br/>"+country.getName();
+			//1-3
+			//country.updateAt(1, 3, "White");
+			country.updateAt("Countries = China", "Ethnicity", "White");
+			//country.removeRow(5);
+			country.removeRow("Countries = Haiti");
+			
+			//country.removeColumn(3);
+			country.removeColumn("Ethnicity");
+			country.addColumn("Race");
+			
+			//country.updateAt(0, 4, "White");
+			country.updateAt("Countries = USA", "Race", "White");
+			
+			//country.removeData(2,2);
+			country.removeData("Countries = Russia", "Continent");
+			document.body.appendChild(country.Display(500,500));
+			
+			//console.log(country);*/
+			
+			//-----------------------------STORE TABLES----------------------------------------
+			store.insertTable(country);
+			store.insertTable(movies);
+			
+			document.body.appendChild(country.Display(100,100));
+			document.body.appendChild(movies.Display(100,100));
+			
+			var storage = new TDB.getStorage("MongoDB");
+			
+			console.log(storage.size());
+			console.log(storage.selectTable("Movies"));
+			console.log("Drop Movies table:");
+			storage.dropTable("Movies");
+			console.log(storage.size());
+			console.log("Insert Movies table again:");
+			storage.insertTable(movies);
+			console.log(storage.size());
+			
+			
+			
+			//console.log(storage);
+			
+        </script>
+    </body>
+</html>
