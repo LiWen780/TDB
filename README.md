@@ -4,17 +4,16 @@ You can use it in a HTML5 game for data manipulation.
 
 # 1) How to create a table:
       Syntax:  new TDB.Table("COUNTRY", columns, rows);
-   columns and rows are objects or arrays containing the different columns and the rows within the table.
-   You can also start a table by the expression:
-      new TDB.Table("COUNTRY");
+      Syntax #2 : new TDB.Table("COUNTRY");
+Columns and rows are objects or arrays containing the different columns and the rows within the table.
       
 # 2) Adding columns:
       Syntax: .addColumn("Column1");
-  addColum is a method from the Table class. 
+addColum is a method from the Table class. 
   
 # 3) Adding rows:
       Syntax: .addRow("row1, row2, row3, row4, row5");
- addRow is a method from the table class by which you can add row to the table.
+addRow is a method from the table class by which you can add row to the table.
  
 # 4) Get the number of current space for data within the table:
       Syntax: .getSize()
@@ -31,13 +30,12 @@ You're updating the column "Position" at row where the data in column "Continent
 # 6) Get data from a cell of the data:
       Syntax: .getData(row_id, column_id)
       Syntax 2: country.getData("Countries = China", "Languages")
-  Get data in column "Languages" from the row where the data from column "Countries" is "China".
+Get data in column "Languages" from the row where the data from column "Countries" is "China".
 
 # 7) Delete an entire row from the table:
       Syntax: .removeRow(row_id)
-      Syntax 2: country.removeRow("Countries = China")
-    
-    Remove the row where the data from column "Countries" is "China"
+      Syntax 2: country.removeRow("Countries = China")    
+Remove the row where the data from column "Countries" is "China"
     
 # 8) Delete an entire column from a table:
       Syntax: .removeColumn(column_id)
@@ -50,16 +48,16 @@ Remove the data from the column "Continent" where the column "Countries" has dat
 
 # 10) Get the name of your table:
       Syntax: .getName()
- The method returns the name of your table.
+The method returns the name of your table.
  
 # 11) Display your table with its data:
       Syntax: .Display(table_width, table_height)
-      Syntax 2: .Display()
-  
- This method returns a HTML table element so that you can use it anywhere you want on your page.
+      Syntax 2: .Display() 
+This method returns a HTML table element so that you can use it anywhere you want on your page.
  
  # 12) Get the names of all the columns inside your table:
             Syntax: .getColumns();
+Return a String value with names of all the columns.
     
  # 13) Save your table data as a cookie:
  
@@ -79,4 +77,4 @@ Remove the data from the column "Continent" where the column "Countries" has dat
  # 14) Get and use a TDB storage space that you saved before, but not in your file or created long time ago.
             Syntax: new TDB.getStorage("storage_name")
             
-  This method returns a TDB.Storage object which means that it can use all the TDB.Storage object's methods.
+This method returns a TDB.Storage object which means that it can use all the TDB.Storage object's methods.
