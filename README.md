@@ -1,4 +1,4 @@
-# TDB_1.1.js
+# TotoyeDatabase
 TDB or Totoye DataBase is a small JavaScript database created by Li Wen to arrange data during web programming. We can use it to display data inside a table on a web page or to simply save temporarily data or permanent ones as cookie. 
 You can use it in a HTML5 game for data manipulation.
 
